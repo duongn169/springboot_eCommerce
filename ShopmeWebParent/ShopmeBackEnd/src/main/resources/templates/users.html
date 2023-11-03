@@ -6,6 +6,7 @@
 <title>Shop HienLuna</title>
 <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}">
 <link rel="stylesheet" type="text/css" th:href="@{/fontawesome/all.css}">
+<link rel="stylesheet" type="text/css" th:href="@{/style.css}">
 
 <script type="text/javascript" th:src="@{/webjars/jquery/jquery.min.js}"></script>
 <script type="text/javascript" th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
@@ -63,10 +64,47 @@
 			
 		</div>
 		<div>
-			<h1>Shop HienLuna Control Panel</h1>
+			<h2 style="text-align: center;">Manage Users</h2>
+			<a th:href="@{/users/new}">Create New User</a>
 		</div>
-		
+		<div th:if="${message != null}" class="alert alert-success text-center">
+			[[${message}]]
+		</div>
 		<div>
+			<table class="table table-bordered table-striped table-hover table-response">
+				<thead class="thead-dark">
+					<tr>
+							<th>User ID</th>
+							<th>Photos</th>
+							<th>Email</th>
+							<th>First Name</th>
+							<th>Last Name</th>
+							<th>Roles</th>
+							<th>Enabled</th>
+							<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="user : ${listUsers}">
+						<td>[[${user.id}]]</td>
+						<td><span class="fas fa-portrait fa-3x icon-dark"></span></td>
+						<td>[[${user.email}]]</td>
+						<td>[[${user.firstName}]]</td>
+						<td>[[${user.lastName}]]</td>
+						<td>[[${user.roles}]]</td>
+						<td>
+							<a th:if="${user.enabled == true}" class="fas fa-check-circle icon-green" href=""></a>
+							<a th:if="${user.enabled == false}" class="fas fa-check-circle icon-dark" href=""></a>
+						</td>
+						<td>
+							<a class="fas fa-edit" href=""></a>
+							 <a class="fas fa-trash" href=""></a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="text-center">
 			<p>Shop HienLuna Control Panel - CopyRight &copy; Shop</p>
 		</div>
 		
