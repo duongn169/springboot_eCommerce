@@ -1,10 +1,74 @@
 <!DOCTYPE html>
-<html>
+<html  xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="ISO-8859-1">
+  	<meta http-equiv="Content-Type" content="text/html"; charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 <title>Shop HienLuna</title>
+<link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}">
+<script type="text/javascript" th:src="@{/webjars/jquery/jquery.min.js}"></script>
+<script type="text/javascript" th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
 </head>
 <body>
-	<h1>Shop HienLuna Control Panel</h1>
+	<div class="container-fluid">
+		<div>
+			  <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <a class="navbar-brand" th:href="@{/}">
+			<img th:src="@{/images/img1.png}" />
+		</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/users}" style="color: white;">Users</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/categories}" style="color: white;">Categories</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/brands}" style="color: white;">Brands</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/products}" style="color: white;">Products</a>
+                </li>
+                 <li class="nav-item">
+                    <a class="nav-link" th:href="@{/customers}" style="color: white;">Customers</a>
+                </li>
+                 <li class="nav-item">
+                    <a class="nav-link" th:href="@{/shipping}" style="color: white;">Shipping</a>
+                </li>
+                 <li class="nav-item">
+                    <a class="nav-link" th:href="@{/orders}" style="color: white;">Orders</a>
+                </li>
+                 <li class="nav-item">
+                    <a class="nav-link" th:href="@{/reports}" style="color: white;">Reports</a>
+                </li>
+                 <li class="nav-item">
+                    <a class="nav-link" th:href="@{/articles}" style="color: white;">Articles</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/menus}" style="color: white;">Menus</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/settings}" style="color: white;">Settings</a>
+                </li>
+                
+            </ul>
+        </div>
+    </nav>
+			
+		</div>
+		<div>
+			<h1>Shop HienLuna Control Panel</h1>
+		</div>
+		
+		<div>
+			<p>Shop HienLuna Control Panel - CopyRight &copy; Shop</p>
+		</div>
+		
+	</div>
+	
 </body>
 </html>
